@@ -1,0 +1,51 @@
+<div class="filter-form">
+    <div class="block-primary">
+        <div class="field-text">
+            <p>Search by title:</p>
+            <input type="text" [(ngModel)]="productsService.searchTitle" placeholder="Name">
+        </div>
+        <div class="field-select">
+            <p>Category:</p>
+            <select [(ngModel)]="productsService.activeCategory">
+                <option value="">All</option>
+                <ng-container *ngFor="let category of productsService.categoryValues; trackBy: trackCategory">
+                    <option [value]="category">{{ category }}</option>
+                </ng-container>
+            </select>
+        </div>
+    </div>
+    <div class="block-secondary">
+        <div class="field-range">
+            <p>Price Range: {{productsService.averagePrice}}</p>
+            <div class="range-container"> 
+                <div class="range-labels">
+                    <p>{{productsService.priceExtremes[0]}}</p>
+                    <p>{{productsService.priceExtremes[1]}}</p>
+                </div>
+                <input
+                class="range-slider" 
+                type="range" 
+                [(ngModel)]="productsService.averagePrice"
+                [min]="productsService.priceExtremes[0]" 
+                [max]="productsService.priceExtremes[1]"
+                step="50">
+            </div>
+        </div>
+        <div class="field-range">
+            <p>Rating: {{ productsService.currentStarRating }}</p>
+            <div class="range-container">
+                <div class="range-labels">
+                    <p>1</p>
+                    <p>5</p>
+                </div>
+                <input
+                class="range-slider" 
+                type="range"
+                min="1"
+                max="5"
+                [(ngModel)]="productsService.currentStarRating"
+                step="1">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+.item-display {
+    width: 225px;
+    height: 370px;
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #CCE3DE;
+    border-radius: 22px;
+    border: 0.5px solid #ABABAB;
+}
+
+.item-display > img {
+    width: 172px;
+    height: 170px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+
+.item-display > p {
+    height: 26px;
+    width: 193px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    background-color: #A4C3B2;
+    border-radius: 20px;
+    border: 0.5px solid #ABABAB;
+    padding: 16px;
+    padding-left: 13px;
+    font-size: 12px;
+    line-height: 13px;
+    font-weight: 700; 
+}
+

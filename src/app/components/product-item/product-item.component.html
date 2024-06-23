@@ -1,0 +1,11 @@
+<div class="item-display">
+    <img [src]="productImage" alt="Product Image" width="172" height="170" loading="lazy">
+    <p>Title: {{ productName }} </p>
+    <p>Category: {{ productCategory }} </p>
+    <p>Price: {{ productCost }} $ </p>
+    <div>
+        <app-product-rated [rating]="productRated"/>
+    </div>
+</div>
+
+

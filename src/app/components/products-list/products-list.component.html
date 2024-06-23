@@ -1,0 +1,11 @@
+<div class="items-list">
+    <ng-container *ngFor="let product of productsService.getFilteredProducts(); trackBy: trackById">
+        <app-product-item
+        [productName]="product.title"
+        [productCategory]="product.category"
+        [productCost]="product.price"
+        [productRated]="product.rating"
+        [productImage]="product.images[0]"
+        />
+    </ng-container>
+</div>

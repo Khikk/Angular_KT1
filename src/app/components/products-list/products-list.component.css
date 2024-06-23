@@ -1,0 +1,11 @@
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 52px;
+}
+
+.items-list > * {
+    width: 230px;
+    height: 355px;
+}
